@@ -1,0 +1,32 @@
+[
+  {
+    "icon": "home",
+    "name": "Inicio",
+    "redirectTo": "/inicio"
+  },
+  {
+    "icon": "american-football",
+    "name": "Ternera-Novilla",
+    "redirectTo": "/novillac"
+  },
+  {
+    "icon": "american-football",
+    "name": "Prosima",
+    "redirectTo": "/prosimac"
+  },
+  {
+    "icon": "american-football",
+    "name": "Vacas",
+    "redirectTo": "/vacac"
+  },
+  {
+    "icon": "american-football",
+    "name": "Leche",
+    "redirectTo": "/lechec"
+  },
+  {
+    "icon": "american-football",
+    "name": "Noticias",
+    "redirectTo": "/noticias"
+  }
+]

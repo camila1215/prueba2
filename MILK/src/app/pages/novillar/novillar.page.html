@@ -1,0 +1,79 @@
+<app-header titulo="Registrar Novilla"></app-header>
+
+<ion-content padding>
+  <ion-grid fixed>
+
+    <ion-card>
+      <ion-item>
+        <ion-avatar>
+          <img src="../../assets/icon/basica.jpg">
+        </ion-avatar>
+        <ion-label text-center>Información Básica</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-input placeholder="Nombre" [(ngModel)]="nombre_vaca"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-input placeholder="ID" [(ngModel)]="numero_vaca"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-input placeholder="Raza" [(ngModel)]="raza"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-input placeholder="Peso" type="number" [(ngModel)]="peso"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label color="medium">Fecha de Nacimiento</ion-label>
+        <ion-datetime type="date-time" [(ngModel)]="FN"></ion-datetime>
+      </ion-item>
+
+
+    </ion-card>
+
+    <br>
+
+    <ion-card>
+      <ion-item>
+        <ion-avatar>
+          <img src="../../assets/icon/padres.jpg">
+
+        </ion-avatar>
+        <ion-label text-center>Información de Padres</ion-label>
+      </ion-item>
+
+
+      <ion-item>
+        <ion-input placeholder="ID padre" [(ngModel)]="idmadre"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-input placeholder="ID madre" [(ngModel)]="idpadre"></ion-input>
+      </ion-item>
+    </ion-card>
+  
+
+    <ion-row>
+      <ion-col text-center>
+        <ion-button (click)="CreateRecord()"  [disabled]="!nombre_vaca || !numero_vaca || !peso">
+          <ion-icon size="small" slot="icon-only" name="add"></ion-icon>
+          &nbsp;Registrar
+        </ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col text-center>
+        <ion-button [routerLink]="['/novillac']"> Consultar</ion-button>
+        <ion-icon size="small" slot="icon-only" name="add"></ion-icon>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+
+
+</ion-content>

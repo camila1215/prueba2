@@ -1,0 +1,60 @@
+<ion-header>
+  <ion-toolbar color="danger">
+      <ion-buttons>
+          <ion-menu-button color="light"
+                           menu="menu">
+          </ion-menu-button>
+
+  <ion-title text-center>Informe de producción lechera</ion-title>
+        </ion-buttons>
+    <ion-buttons slot="end">
+        <ion-avatar>
+          <img class="avatar" src="../../assets/icon/icono_leche.svg">
+        </ion-avatar>
+      </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<br>
+<br>
+<br>
+<ion-content >
+    <ion-fab vertical="bottom"  horizontal="end" slot="fixed"  >
+      <ion-fab-button color="danger" (click)="descargar()">
+        <ion-icon  name="document" ></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
+
+<ion-list id="results" >
+ 
+  <ion-item  *ngFor="let item of ganaderia | async"  >
+<table >
+    <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Id</th>
+          <th>Fecha</th>
+          <th>Jornada1</th>
+          <th>Encargado</th>
+          <th>Jornada2</th>
+          <th>Encargado</th>
+          <th>Total Ordeño</th>
+        </tr>
+        </thead>
+  <tbody >
+  <tr >
+    <td>{{item.nombre_vaca}}</td>
+    <td>{{item.numero_vaca}}</td>
+    <td>{{item.FO}}</td>
+    <td>{{item.jornada1}} Lts </td>
+    <td>{{item.encargado1}}</td>
+    <td>{{item.jornada2}} Lts</td>
+    <td>{{item.encargado2}}</td>
+    <td>{{item.jornada1 + item.jornada2}} Lts</td> 
+  </tr>
+
+</tbody>
+</table>
+  </ion-item>
+</ion-list>
+ 
+</ion-content>
